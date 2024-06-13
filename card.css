@@ -1,0 +1,98 @@
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(244,202,181);
+background: linear-gradient(0deg, rgba(244,202,181,1) 0%, rgba(232,73,5,1) 100%);
+display: flex;
+flex-direction: column;
+}
+header{
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: rgb(0,0,8);
+background: linear-gradient(90deg, rgba(0,0,8,1) 35%, rgba(235,239,240,1) 100%);
+text-align: left;
+    color: white;
+}
+h1{
+    margin:0;
+    padding: 10px;
+    }
+main{
+    flex-grow: 1; /* Hace que el contenido principal ocupe todo el espacio disponible */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}    
+.card{
+    background-color: white;
+    border-radius: 10px;
+    border:1px solid white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    padding: 20px;
+}
+#izq{
+    padding: 50px;
+    width: 230px;
+}
+#der{
+    padding: 15px;
+    width: 420px;
+}
+#producto h2 {
+    transition: color 0.3s ease;/*transition: Propiedad(Color, width, height...), duración, tipo de temporización*/
+}
+#producto h2:hover {
+    color: #ff6347; /* Cambia el color del texto al pasar el mouse */
+}
+#precio{
+    color: rgb(247, 99, 7);
+    background-color: rgb(222, 218, 214);
+    border-radius: 10px;
+    animation-name: example;
+    animation-duration: 6s;
+}
+@keyframes example {
+    from {background-color: rgb(220, 200, 185);}
+    to {background-color: yellow;}
+  }
+.hvr-pulse{
+    color: white;
+    background-color: rgb(247, 99, 7);
+    border: 1px solid rgb(247, 99, 7);
+    border-radius: 5px;
+    padding: 10px;
+    width: 252px;
+    box-shadow: 1px 1px 1px 0 rgb(247, 99, 7), 4px 4px 16px 0 #d66, 0px 0px 24px 2px rgb(221, 197, 102);
+    cursor: pointer; /*Cambia la apariencia del cursor*/
+}
+@media screen and (max-width: 600px) {
+    .card {
+        max-width: 90%; /* Reducir el ancho máximo de la tarjeta */
+    }
+    #izq {
+        padding: 20px; /* Reducir el relleno de la sección izquierda */
+        width: 100%; /* Ajustar el ancho de la sección izquierda */
+    }
+    #der {
+        padding: 15px; /* Reducir el relleno de la sección derecha */
+        width: 100%; /* Ajustar el ancho de la sección derecha */
+    }
+}
+footer{
+    background: rgb(0,0,8);
+    background: linear-gradient(90deg, rgba(0,0,8,1) 35%, rgba(235,239,240,1) 100%);
+    color: aliceblue;
+    font-size: 14px;
+}
+
+    
