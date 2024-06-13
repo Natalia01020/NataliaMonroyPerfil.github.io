@@ -1,0 +1,123 @@
+body,html{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+#foto{
+    margin: 35px;
+}
+#foto img{
+    animation: fade-in 5s ;
+}
+@keyframes fade-in {
+    0% {opacity: 0; width: 250px; }
+    25% {opacity:1; width: 350px; }
+    50% {opacity:1; width: 350px;}
+    75% {opacity: 1; width: 250px;} 
+    100% { opacity: 1; width: 250px;}
+  }
+
+#aboutme{
+    margin:50px;
+    width:65%;
+}
+#educacion{
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    color:white
+}
+#educacion, #proyectos h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cert-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten en filas si el espacio no es suficiente */
+}
+.cert {
+    max-width: 100%; /* Asegura que las imágenes no excedan su contenedor */
+    flex: 1; /* Cada imagen ocupa el mismo espacio */
+    max-width: 250px; /* Limita el tamaño máximo de las imágenes */
+}
+.panel{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#experiencia{
+    display:flex;
+    flex-direction: column;
+    width:60%;
+    border: 1px dotted;
+    border-radius: 20px;
+    margin-left: 5px;
+    
+}
+#habilidades{
+    width: 40%;
+}
+#habilidades, #experiencia h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.hab-container{
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-rows: auto;
+    justify-content: center;
+    text-align: center;
+    gap:10px;
+ }
+.hab-container img{
+    width: 100%;
+    height:auto;
+}
+.esp{
+    order: 1;
+}
+.ing{
+    order:2;
+}
+.des{
+    order:3;
+}
+.exc{
+    order:4;
+}
+.noventa{
+    order: 5;
+}
+.ochenta{
+    order:6;
+}
+.treinta{
+    order:7;
+}
+.setenta{
+    order:8
+}
+footer{
+    text-align: center;
+} 
+.cert-container a{
+    width:203.2px;
+    text-align: center;
+}
+#proyectos a{
+    text-decoration: none;
+}
+#proyectos a:hover{
+    text-decoration: underline;
+}
+footer{
+    background-image: linear-gradient(to right, #d7d2cc 0%, #304352 100%);
+}
+
