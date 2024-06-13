@@ -1,0 +1,104 @@
+html, body {
+    height: 100%; /* Asegurar que el cuerpo y el HTML ocupen el 100% del alto de la pantalla */
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: rgb(241,228,239);
+    background: linear-gradient(0deg, rgba(241,228,239,1) 0%, rgba(238,113,224,1) 100%);
+    background-attachment: fixed; /* Fijar el fondo de la página */
+}
+header{
+    text-align: center;
+    font-family:"outfit";
+    color: brown;
+}
+h1 {
+    animation: fade-in 4s ease-in-out forwards;
+  }
+  @keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }  
+main{
+    flex-grow: 1;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.days{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: auto;
+    gap: 8px; /* Espacio entre las imágenes */
+    justify-content: center;
+    align-content: center;
+    padding: 22px; 
+    width: 1150px;/*Ancho del div grande que contiene pequeños divs con los días*/
+    text-align: center;
+    color: brown;
+    font-family: "quicksand";
+}
+.days div:hover { /*Pseudo-clases:  permiten aplicar estilos a elementos en ciertos estados o condiciones específicas.*/
+    background-color: lightgray;
+}
+.days{
+    transition: font-size 5s ease;
+}
+.days:hover{
+    font-size: 24px;
+}
+.calendar{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); 
+    grid-template-rows: auto;
+    gap: 8px; /* Espacio entre los recuadros */
+    justify-content: center;
+    align-content: center;
+    padding: 20px; 
+    width: 100%;/*Ancho del div grande que contiene pequeños divs con los días*/
+    border: 1px solid rgba(238,113,224,1);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "quicksand";
+}
+.hvr-pop{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100%; 
+    border: 1px solid rgba(238,113,224,1);
+    border-radius: 10px;
+}
+footer{
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 10px;
+}
+/* Media query para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .days, .calendar {
+      width: 90%; /* Reducir el ancho del calendario en pantallas pequeñas */
+      padding: 10px; /* Reducir el relleno del calendario en pantallas pequeñas */
+      font-size: 14px; /* Reducir el tamaño de fuente en pantallas pequeñas */
+    }
+  }
+  
+  /* Media query para pantallas medianas */
+  @media screen and (min-width: 769px) and (max-width: 1024px) {
+    .days, .calendar {
+      width: 80%; /* Reducir el ancho del calendario en pantallas medianas */
+      padding: 15px; /* Reducir el relleno del calendario en pantallas medianas */
+      font-size: 16px; /* Reducir el tamaño de fuente en pantallas medianas */
+    }
+  }
+  
+  /* Media query para pantallas grandes */
+  @media screen and (min-width: 1025px) {
+    .days, .calendar {
+      width: 1150px; /* Ancho original del calendario en pantallas grandes */
+      padding: 20px; /* Relleno original del calendario en pantallas grandes */
+      font-size: 18px; /* Tamaño de fuente original en pantallas grandes */
+    }
+  }
