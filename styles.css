@@ -1,0 +1,80 @@
+html{
+    height: 100%;
+}
+body{
+    background-image: url(netflix.jpg);
+    background-size: cover;
+    min-height: 100%;
+}
+.principal{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+form{
+    background-color: rgb(17,13,1,.8); /*El .8 determina el nivel de opacity o transparencia)*/
+padding: 42px;
+width: 250px;
+height: 50%;
+border: 1px solid black;
+color: aliceblue;
+border-radius: 10px;
+}
+nav{
+    font-family:inherit;
+    font-size: 30px;
+    a {
+        text-decoration: none;
+    }/*Este sirve para quitarle el subrayado a enlaces de navegación*/
+    a:visited {
+        color: rgb(229,9,20);
+    }
+}
+.campos{
+    background-color: rgb(17,13,1,.8);
+    color: aliceblue;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    width: 229px;
+    text-shadow: 1px white;
+    align-items: center;
+}
+.button{
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    border-radius: 5px;
+    padding: 10px;
+    width: 252px;
+}
+.b{
+    color: white;
+    background-color: rgb(83, 81, 81,.8);
+    border: 1px solid rgb(83, 81, 81);
+    border-radius: 5px;
+    padding: 10px;
+    width: 252px;
+}
+.olv{
+    a {
+        text-decoration: none;
+    }
+    a:visited {
+        color: white;
+    }
+    text-align: center;
+}
+.error {
+    color: red;
+    font-size: 12px;
+    display: none; /* Oculta los mensajes de error por defecto */
+}
+
+input:required:invalid + .error {
+    display: block; /* Muestra el mensaje de error cuando el campo es requerido pero está vacío */
+}
+
+input:required:valid + .error {
+    display: none; /* Oculta el mensaje de error cuando el campo es requerido y contiene información válida */
+}
